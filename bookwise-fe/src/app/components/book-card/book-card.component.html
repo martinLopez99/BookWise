@@ -1,0 +1,23 @@
+<div class="card h-100">
+  <img
+    *ngIf="book?.volumeInfo.imageLinks?.thumbnail"
+    [src]="book.volumeInfo.imageLinks.thumbnail"
+    class="card-img-top"
+    alt="{{ book.volumeInfo.title }}"
+  />
+  <div class="card-body text-center">
+    <h5 class="card-title">{{ book.volumeInfo.title }}</h5>
+    <p class="card-text">
+      Autor: {{ book.volumeInfo.authors?.join(', ') || 'No disponible' }}
+    </p>
+  </div>
+  <div class="card-footer d-flex justify-content-center gap-2">
+    <a class="btn btn-success flex-grow-1" [href]="book.volumeInfo.infoLink" target="_blank">
+      Ver en Google Books
+    </a>
+    <button class="btn btn-outline-secondary flex-grow-1" (click)="addToFavorites()">
+      Agregar a Favoritos
+    </button>
+  </div>
+
+</div>

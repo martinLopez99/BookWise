@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+
+<div class="container my-4">
+  <h2 class="mb-4 text-center">Libros Recomendados</h2>
+
+  <!-- Componente de búsqueda -->
+  <app-search-bar
+    (searchQueryChange)="searchBooks($event)"
+  ></app-search-bar>
+
+  <!-- Listado de libros -->
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let book of books">
+      <app-book-card class="app-book-card" [book]="book" (favoriteAdded)="handleFavoriteAdded($event)"></app-book-card>
+    </div>
+  </div>
+
+  <!-- Controles de Paginación -->
+  <div class="pagination-container my-4 d-flex justify-content-center align-items-center">
+    <!-- Flecha anterior -->
+    <button
+      class="btn btn-outline-secondary mx-1"
+      (click)="previousPage()"
+      [disabled]="currentPage === 0"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Números de páginas -->
+    <ng-container *ngFor="let page of getPageNumbers(); let i = index">
+      <button
+        class="btn"
+        [ngClass]="{'btn-primary': currentPage === page, 'btn-outline-secondary': currentPage !== page}"
+        (click)="goToPage(page)"
+      >
+        {{ page + 1 }}
+      </button>
+    </ng-container>
+
+    <!-- Flecha siguiente -->
+    <button
+      class="btn btn-outline-secondary mx-1"
+      (click)="nextPage()"
+      [disabled]="!hasNextPage"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+
+  <app-favorite-popup
+  [show]="showPopup"
+  [message]="popupMessage"
+  (popupClosed)="closePopup()"
+  (loginRedirect)="redirectToLogin()">
+  </app-favorite-popup>
+
+</div>
+

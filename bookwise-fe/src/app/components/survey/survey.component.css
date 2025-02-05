@@ -1,0 +1,85 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #4caf50;
+}
+
+.survey-form {
+  font-family: 'Arial', sans-serif;
+}
+
+.question-container {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.rating label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rating input[type='radio'] {
+  display: none;
+}
+
+.rating span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 2px solid #4caf50;
+  border-radius: 50%;
+  color: #4caf50;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.rating input[type='radio']:checked + span {
+  background-color: #4caf50;
+  color: white;
+}
+
+button {
+  margin: 0 10px; /* Margen horizontal entre los botones */
+}
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+h2 {
+  font-size: 2rem; /* Aumenta el tamaño del título principal */
+}
+
+.question-container h5 {
+  font-size: 1.2rem; /* Aumenta el tamaño del texto de las preguntas */
+  color: #333;
+}
+
+.rating span {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.1rem; /* Aumenta el tamaño del número en los círculos */
+}
+

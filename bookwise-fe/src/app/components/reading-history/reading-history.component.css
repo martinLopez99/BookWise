@@ -1,0 +1,54 @@
+/* Contenedor principal */
+.container {
+  margin-top: 20px;
+  padding: 1rem;
+}
+
+/* Título */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #343a40;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tabla */
+.table {
+  font-size: 1.1rem; /* Aumentar tamaño de letra de la tabla */
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Encabezado de la tabla */
+.table thead th {
+  font-size: 1.2rem; /* Tamaño de letra más grande */
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; /* Color azul para el encabezado */
+  text-align: center;
+}
+
+/* Filas de la tabla */
+.table tbody td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+/* Alternar color de filas */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+
+/* Efecto hover en las filas */
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Bordes redondeados para la tabla */
+.table th,
+.table td {
+  border: none;
+}

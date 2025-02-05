@@ -1,0 +1,24 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4">Encuesta de Preferencias Literarias</h2>
+  <form (ngSubmit)="submitSurvey()" class="survey-form">
+    <div *ngFor="let question of questions" class="mb-4 question-container">
+      <h5>{{ question.text }}</h5>
+      <div class="rating">
+        <label *ngFor="let score of [1, 2, 3, 4, 5]">
+          <input
+            type="radio"
+            [name]="'question_' + question.id"
+            [value]="score"
+            [(ngModel)]="question.answer"
+            required
+          />
+          <span>{{ score }}</span>
+        </label>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <button type="button" class="btn btn-secondary btn-lg mx-2" (click)="goBack()">Volver Atrás</button>
+      <button type="submit" class="btn btn-success btn-lg mx-2">Enviar Respuestas</button>
+    </div>
+  </form>
+</div>

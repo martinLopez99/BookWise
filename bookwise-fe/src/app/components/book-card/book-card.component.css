@@ -1,0 +1,158 @@
+
+
+/* Contenedor del pop-up */
+.popup-content {
+  background: white;
+  width: 90%;
+  max-width: 400px; /* Limita el ancho */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center; /* Centra el contenido */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Título del pop-up */
+.popup-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Mensaje del pop-up */
+.popup-message {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Botones en el pop-up */
+.popup-actions {
+  display: flex;
+  gap: 10px; /* Espacio entre botones */
+  justify-content: center;
+}
+
+.popup-actions .btn-primary {
+  background-color: #28a745; /* Verde inicial */
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Suaviza el cambio */
+}
+
+.popup-actions .btn-primary:hover {
+  background-color: #218838; /* Verde más oscuro al pasar el cursor */
+  transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+/* Botón secundario con borde verde */
+.popup-actions .btn-outline-secondary {
+  border: 1px solid #28a745; /* Borde verde */
+  color: #28a745; /* Texto verde */
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.popup-actions .btn-outline-secondary:hover {
+  background-color: #28a745; /* Fondo verde al pasar el cursor */
+  color: white; /* Texto blanco */
+  transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+.popup-actions .btn-close-popup {
+  background-color: #dc3545; /* Rojo inicial */
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Suaviza el cambio */
+}
+
+.popup-actions .btn-close-popup:hover {
+  background-color: #c82333; /* Rojo más oscuro al pasar el cursor */
+  transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+/* Estilo general para la tarjeta */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Efecto hover para la tarjeta */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen de la tarjeta */
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Título del libro */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Autor del libro */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Pie de la tarjeta */
+.card-footer {
+  background-color: #fff;
+  border-top: none;
+  padding: 1rem;
+}
+
+/* Botones */
+.card-footer .btn {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-footer .btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.card-footer .btn-success:hover {
+  background-color: #218838;
+}
+
+.card-footer .btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.card-footer .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}

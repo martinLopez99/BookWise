@@ -1,0 +1,11 @@
+<div *ngIf="show" class="popup-overlay fade-in">
+  <div class="popup-content">
+    <p class="popup-title">{{ message }}</p>
+    <div class="popup-actions">
+      <button class="btn btn-danger" (click)="closePopup()">Cerrar</button>
+      <button *ngIf="message === 'Debes iniciar sesión para agregar libros a favoritos.'"
+              class="btn btn-success"
+              (click)="redirectToLogin()">Iniciar Sesión</button>
+    </div>
+  </div>
+</div>

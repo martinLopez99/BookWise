@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+          <h3 class="mb-0">Perfil del Usuario</h3>
+        </div>
+        <div class="card-body">
+          <div class="mb-4 text-center">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Avatar"
+              class="rounded-circle shadow-lg"
+              width="150"
+              height="150"
+            />
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex align-items-center">
+              <i class="fas fa-user-circle text-primary me-3"></i>
+              <strong>Nombre:</strong>
+              <span class="ms-2">{{ user.name }}</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+              <i class="fas fa-envelope text-success me-3"></i>
+              <strong>Email:</strong>
+              <span class="ms-2">{{ user.email }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" (click)="openPopup()">Encuesta de Preferencias</button>
+    </div>
+  </div>
+</div>
+
+<app-preferences-survey-popup
+  *ngIf="isPopupVisible"
+  (close)="closePopup()"
+  (continue)="navigateToSurvey()">
+</app-preferences-survey-popup>
+

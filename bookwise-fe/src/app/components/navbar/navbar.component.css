@@ -1,0 +1,102 @@
+/* Estilos generales para el navbar */
+.navbar {
+  font-size: 1.2rem; /* Aumenta el tamaño del texto en la navbar */
+  padding: 1rem;    /* Aumenta el padding para mayor altura */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;  /* Aumenta el tamaño del logo 'Bookwise' */
+  font-weight: bold;  /* Hace el logo más llamativo */
+}
+
+.nav-link {
+  position: relative;
+  font-size: 1rem;
+  padding: 0.75rem 1rem; /* Aumenta el padding en los enlaces para mejor clicabilidad */
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Efecto de subrayado dinámico para los enlaces */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0d6efd; /* Color azul para el subrayado */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Subrayado se extiende completamente al pasar el mouse */
+}
+
+.nav-link:hover {
+  color: #0d6efd; /* Cambia el color del texto al azul */
+}
+
+/* Botones generales */
+.btn {
+  font-size: 1.1rem; /* Aumenta el tamaño de los botones 'Iniciar Sesión' y 'Cerrar Sesión' */
+  padding: 0.5rem 1rem;
+}
+
+/* Estilo base para los botones de cerrar e iniciar sesión */
+.btn-logout,
+.btn-login {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado animado para los botones */
+.btn-logout::after,
+.btn-login::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: inherit; /* Hereda el color del borde */
+  transition: width 0.3s ease;
+}
+
+.btn-logout:hover::after,
+.btn-login:hover::after {
+  width: 100%; /* Subrayado se extiende al 100% al hacer hover */
+}
+
+/* Efecto hover para cambiar el color del texto */
+.btn-logout:hover,
+.btn-login:hover {
+  color: #fff; /* Texto blanco al hacer hover */
+}
+
+/* Botón de Cerrar Sesión con borde rojo */
+.btn-logout {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+/* Botón de Iniciar Sesión con borde azul */
+.btn-login {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+/* Cambio de color de fondo al hacer hover */
+.btn-logout:hover {
+  background-color: #dc3545;
+}
+
+.btn-login:hover {
+  background-color: #0d6efd;
+}

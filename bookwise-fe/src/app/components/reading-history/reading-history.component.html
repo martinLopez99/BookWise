@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Historial de Libros Leídos</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-primary">
+        <tr>
+          <th>#</th>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Fecha de Finalización</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of readingHistory; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ book.volumeInfo.title }}</td>
+          <td>{{ book.volumeInfo.authors?.join(', ') || 'No disponible' }}</td>
+          <td>{{ book.finishedDate | date: 'longDate' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

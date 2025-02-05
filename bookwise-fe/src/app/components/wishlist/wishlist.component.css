@@ -1,0 +1,25 @@
+.card {
+  margin-bottom: 20px;
+}
+
+.card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-footer button {
+  width: 100%;
+}
+
+.card-container {
+  margin-bottom: 2rem;
+}
+
+.card-footer .btn {
+  margin-bottom: 0.5rem;
+}

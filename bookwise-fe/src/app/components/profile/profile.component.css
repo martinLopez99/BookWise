@@ -1,0 +1,40 @@
+/* Estilo para el encabezado de la tarjeta */
+.card-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Avatar del usuario */
+.card img {
+  border: 4px solid #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista del perfil */
+.list-group-item {
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Íconos de perfil */
+.list-group-item i {
+  font-size: 1.5rem;
+}
+
+/* Sombra de la tarjeta */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}

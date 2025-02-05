@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Lista de Deseados</h2>
+  <div class="row g-5">
+    <div class="col-md-4" *ngFor="let book of wishlist">
+      <div class="card h-100 shadow-sm">
+        <img
+          *ngIf="book.volumeInfo.imageLinks?.thumbnail"
+          [src]="book.volumeInfo.imageLinks.thumbnail"
+          class="card-img-top"
+          alt="{{ book.volumeInfo.title }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ book.volumeInfo.title }}</h5>
+          <p class="card-text">
+            Autor: {{ book.volumeInfo.authors?.join(', ') || 'No disponible' }}
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <div class="d-grid gap-2">
+            <button class="btn btn-success btn-lg" (click)="markAsRead(book.id)">
+              Leído
+            </button>
+            <button class="btn btn-danger btn-lg" (click)="removeFromWishlist(book.id)">
+              Eliminar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

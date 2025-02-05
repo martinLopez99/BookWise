@@ -1,0 +1,32 @@
+.search-bar {
+  background-color: #f8f9fa; /* Fondo gris claro */
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.preview-results {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.preview-results .list-group-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.preview-results .list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.preview-thumbnail {
+  width: 40px; /* Tamaño de las miniaturas */
+  height: 60px;
+  object-fit: cover; /* Ajustar imagen sin deformarla */
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}

@@ -1,0 +1,39 @@
+<div class="search-bar p-4 mb-4">
+  <div class="input-group">
+    <span class="input-group-text bg-primary text-white">
+      <i class="fas fa-search"></i>
+    </span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Buscar libros..."
+      [(ngModel)]="searchQuery"
+      (keyup)="onSearchKeyUp()"
+      (keyup.enter)="onSearchEnter()"
+    />
+  </div>
+
+  <!-- Vista previa de resultados -->
+  <div class="preview-results mt-2" *ngIf="previewBooks.length > 0">
+    <ul class="list-group">
+      <li
+        class="list-group-item d-flex align-items-center"
+        *ngFor="let book of previewBooks"
+        (click)="selectPreviewBook(book)"
+      >
+        <!-- Imagen de portada -->
+        <img
+          *ngIf="book.volumeInfo.imageLinks?.thumbnail"
+          [src]="book.volumeInfo.imageLinks.thumbnail"
+          alt="{{ book.volumeInfo.title }}"
+          class="preview-thumbnail me-3"
+        />
+        <div>
+          <strong>{{ book.volumeInfo.title }}</strong>
+          <br />
+          <small>{{ book.volumeInfo.authors?.join(', ') || 'No disponible' }}</small>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

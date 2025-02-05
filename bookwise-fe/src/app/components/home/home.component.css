@@ -1,0 +1,132 @@
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de sección */
+h2 {
+  font-size: 2rem;
+  color: #343a40;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Estilo de las filas de libros */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  /* Aumenta el espacio entre las tarjetas */
+}
+
+/* Tarjetas */
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo de la tarjeta */
+.app-book-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la tarjeta */
+.app-book-card .card-img-top {
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Cuerpo de la tarjeta */
+.app-book-card .card-body {
+  flex: 1;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Título del libro */
+.app-book-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Autor del libro */
+.app-book-card .card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Pie de la tarjeta */
+.app-book-card .card-footer {
+  background-color: #fff;
+  border-top: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* Botones del footer */
+.app-book-card .btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-book-card .btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.app-book-card .btn-success:hover {
+  background-color: #218838;
+}
+
+.app-book-card .btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.app-book-card .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Paginación */
+.pagination-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination-container .btn {
+  min-width: 40px;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination-container .btn-outline-secondary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
